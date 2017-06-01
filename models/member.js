@@ -25,9 +25,49 @@ const MemberSchema = new Schema ({
     type: Date,
     default: Date.now
   },
+  updated: {
+    type: Date,
+  },
   emailOptIn: {
     type: Boolean,
     default: false
+  },
+  isMember: {
+    type: Boolean,
+    default: false
+  },
+  address: {
+    street: {
+      type: String,
+      trim: true
+    },
+    city: {
+      type: String,
+      trim: true
+    },
+    state: {
+      type: String,
+      trim: true
+    },
+    postCode: {
+      type: String,
+      trim: true
+    },
+    birthday: {
+      day: {
+        type: Number,
+        min: 1,
+        max: 31
+      },
+      month: {
+        type: Number,
+        min: 1,
+        max: 12
+      },
+      year: {
+        type: Number
+      }
+    }
   }
 });
 

@@ -9,6 +9,17 @@ router.get('/', function(req, res) {
   res.json({ message: 'This is a test!' });
 });
 
-router.post('/', MemberController.saveMember);
+// save new member
+router.post('/members', MemberController.saveMember);
+
+// gets all members list
+router.get('/members', MemberController.getMembers);
+
+// gets one member by id
+router.get('/members/:id', MemberController.getOneMember);
+
+router.delete('/members/:id', MemberController.deleteMember);
+
+router.post('/members/:id/edit', MemberController.editMember);
 
 module.exports = router;
