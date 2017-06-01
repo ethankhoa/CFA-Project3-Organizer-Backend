@@ -14,10 +14,20 @@ const MemberSchema = new Schema ({
     }
         },
   email: {
-    type: String
+    type: String,
+    trim: true
   },
-  timestamps: {
-    type: Date
+  phone: {
+    type: String,
+    trim: true
+  },
+  created: {
+    type: Date,
+    default: Date.now
+  },
+  emailOptIn: {
+    type: Boolean,
+    default: false
   }
 });
 

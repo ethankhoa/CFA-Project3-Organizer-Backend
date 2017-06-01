@@ -9,6 +9,6 @@ router.get('/', function(req, res) {
   res.json({ message: 'This is a test!' });
 });
 
-// router.post('/', )
+router.post('/', MemberController.saveMember);
 
 module.exports = router;
