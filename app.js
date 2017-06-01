@@ -5,7 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const router = express.Router();
-const member = require
+const dotenv = require('dotenv').config({ path: '.env' });
 
 
 
@@ -17,7 +17,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // connect to mongo db
-mongoose.connect('mongodb://localhost/churchOrganizer');
+mongoose.connect(process.env.MONGOLAB_LOCAL_URI);
 
 const { connection: db } = mongoose;
 
