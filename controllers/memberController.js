@@ -14,6 +14,10 @@ exports.saveMember = (req, res) => {
   const state = req.body.state;
   const postCode = req.body.postCode;
   const city = req.body.city;
+  const day = req.body.day;
+  const month = req.body.month;
+  const year = req.body.year;
+
   let member = new Member();
   member.email = email;
   member.name.first = firstName;
@@ -25,6 +29,9 @@ exports.saveMember = (req, res) => {
   member.phone = phone;
   member.emailOptIn = emailOptIn;
   member.isMember = isMember;
+  member.birthday.day = day;
+  member.birthday.month = month;
+  member.birthday.year = year;
   member.save()
     .then(() => {
       res.json({ message: 'Member has been added!', data: member });
