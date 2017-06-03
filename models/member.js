@@ -4,6 +4,10 @@ const { Schema } = mongoose;
 
 const MemberSchema = new Schema ({
   name: {
+    title: {
+      type: String,
+      trim: true
+    }
     first: {
       type: String,
       trim: true
