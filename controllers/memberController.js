@@ -5,6 +5,7 @@ const Member = require('../models/member');
 // save members
 exports.saveMember = (req, res) => {
   const email = req.body.email;
+  const title = req.body.title;
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const phone = req.body.phone;
@@ -20,6 +21,7 @@ exports.saveMember = (req, res) => {
 
   let member = new Member();
   member.email = email;
+  member.title = title;
   member.name.first = firstName;
   member.name.last = lastName;
   member.address.street = street;

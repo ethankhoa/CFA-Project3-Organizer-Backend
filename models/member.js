@@ -7,7 +7,7 @@ const MemberSchema = new Schema ({
     title: {
       type: String,
       trim: true
-    }
+    },
     first: {
       type: String,
       trim: true
