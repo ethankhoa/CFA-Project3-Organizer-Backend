@@ -29,8 +29,8 @@ exports.saveMember = (req, res) => {
   member.phone = phone;
   member.emailOptIn = emailOptIn;
   member.isMember = isMember;
-  member.birthday.day = day;
   member.birthday.month = month;
+  member.birthday.day = day;
   member.birthday.year = year;
   member.save()
     .then(() => {

@@ -23,7 +23,7 @@ const { connection: db } = mongoose;
 
 // setting up error logs
 db.on('error', console.error.bind(console, 'connection error:'));
-// when there is error will log to console
+// when there is error will log to c    onsole
 db.once('open', () => {
   console.log('connected to app database')
 });

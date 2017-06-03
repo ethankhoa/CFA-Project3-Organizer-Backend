@@ -52,7 +52,8 @@ const MemberSchema = new Schema ({
     postCode: {
       type: String,
       trim: true
-    },
+    }
+  },
     birthday: {
       day: {
         type: Number,
@@ -68,8 +69,7 @@ const MemberSchema = new Schema ({
         type: Number
       }
     }
-  }
-});
+  });
 
 const Member = mongoose.model('Member', MemberSchema);
 
