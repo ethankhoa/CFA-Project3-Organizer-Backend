@@ -73,7 +73,11 @@ const MemberSchema = new Schema ({
         type: Number
       }
     }
-  });
+  },
+  {
+    minimize: false
+  }
+);
 
 const Member = mongoose.model('Member', MemberSchema);
 
