@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
@@ -49,7 +50,7 @@ app.use('/users', users);
 // app.use('/api', router);
 
 // setting test dummy router
-router.get('/', function(req, res) {
+router.get('/', cors(), function(req, res) {
   res.json({ message: 'This is a test!' });
 });
 
