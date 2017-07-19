@@ -172,4 +172,4 @@ Delete route to delete member record.
 { message: 'Member has been deleted.'}
 ```
 # MongoDB diagram of initial models
-<img src="https://cloudinary.com/console/media_library#/dialog/image/upload/Screen_Shot_2017-07-19_at_4.11.21_PM_xlnahh">
+<img src="https://res.cloudinary.com/ethankhoa/image/upload/v1500444747/Screen_Shot_2017-07-19_at_4.11.21_PM_xlnahh.png">
